@@ -20,6 +20,13 @@ This system represents a full end-to-end software application that stores data, 
 
 ---
 
+## 👥 Team & Contributions
+This project was completed individually by **Amar Hassan**.  
+All system design, implementation, testing, documentation, and presentation were completed by me.
+
+
+---
+
 ## 🐾 What the System Can Do
 - Manage **multiple owners**
 - Manage **multiple pets per owner**
@@ -33,6 +40,38 @@ This system represents a full end-to-end software application that stores data, 
 - Includes full test suite: unit, integration, system
 
 ---
+
+## ▶️ How to Run the Application
+
+First, move into the project’s root directory. From there, run the main application file using Python. Once the program starts, you will see a splash screen followed by a main menu. The menu allows you to add and view owners, manage pets, create and track care tasks, import and export data, and save or load the system state.
+To run the application:
+cd pet-care-system-project4
+python3 src/main.py
+
+## 🧪 How to Run All Tests
+All tests can be run from the project root directory using Python’s built-in unittest framework. The test suite includes unit tests, integration tests, and system tests that validate the correctness and reliability of the application.
+To run the full test suite:
+python3 -m unittest discover -s tests
+The tests cover schedule logic, task completion rules, pet inheritance and serialization, owner and tracker integration, storage save and load behavior including corrupted file recovery, multi-step integration workflows, and full system save-to-load verification. All tests should pass successfully.
+
+## 📤 Importing Tasks via CSV
+The system supports importing care tasks from a CSV file. The CSV file must follow this format:
+owner,pet,task_label,every_days,start_date,notes
+Amar,Luna,Feed,1,2025-01-01,Morning feeding
+Amar,Luna,Walk,1,2025-01-01,30-minute walk
+To import tasks, open the main menu, select the option to import tasks from CSV, and enter the file path when prompted. The system validates each row before adding the tasks.
+
+## 📥 Exporting Pet Summaries
+The application allows users to export a pet’s information to a JSON file. The exported summary includes the pet’s name, breed, age, weight, all assigned care tasks, and veterinary record information. This feature provides an easy way to generate reports or backups.
+
+## 🗄️ Data Persistence
+All application data is stored in a JSON file located at data/data.json. A backup file named data/data.json.bak is created automatically. If the main data file becomes corrupted, the system automatically restores data from the backup to prevent data loss.
+
+🎥 Project Presentation Video
+Link to the Project 4 presentation video:
+https://drive.google.com/file/d/17gZaNFGEYq-njji1DXCKGRgT8Rbv9emV/view?usp=sharing
+
+
 
 ## 📁 Project Structure
 
@@ -66,66 +105,3 @@ README.md
 architecture.md
 testing_documentation.md
 requirements.txt
-
-▶️ How to Run the Application
-1. Move into the project folder:
-cd pet-care-system-project4
-2. Run the program:
-python3 src/main.py
-You will see:
-A splash screen
-Main menu
-Options to add/view owners, pets, tasks
-Import/Export tools
-Save/load options
-🧪 How to Run All Tests
-From the project root:
-python3 -m unittest discover -s tests
-The tests cover:
-Schedule logic
-Task completion rules
-Pet inheritance + serialization
-Owner/Tracker integration
-Storage save/load + corrupted file recovery
-Multi-step integration flows
-Full system save → load verification
-All tests should pass.
-📤 Importing Tasks via CSV
-CSV must follow this format:
-owner,pet,task_label,every_days,start_date,notes
-Amar,Luna,Feed,1,2025-01-01,Morning feeding
-Amar,Luna,Walk,1,2025-01-01,30-minute walk
-To import:
-Open the main menu
-Select “Import Tasks (CSV)”
-Enter the file path
-📥 Exporting Pet Summaries
-Exports a pet’s details to a JSON file.
-Includes:
-Name
-Breed
-Age
-Weight
-All care tasks
-Veterinary record
-🗄️ Data Persistence
-The system stores all data in:
-data/data.json
-A backup is created automatically:
-data/data.json.bak
-If the main file becomes corrupted, the backup is used automatically.
-🎥 Project Presentation Video
-Insert the link to your video presentation here:
-[Add link before submission]
-🧑‍💻 Notes on AI Collaboration
-AI assistance was used for:
-Initial file structure planning
-Drafting documentation
-Helping generate testing scaffolds
-All code was reviewed, understood, and validated before being included.
-✅ Final Notes
-This capstone project demonstrates:
-Strong OOP design
-Real file persistence
-CLI-based workflows
-A complete integration-tested system
