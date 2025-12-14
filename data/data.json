@@ -1,0 +1,44 @@
+{
+    "owners": [
+        {
+            "name": "Amar",
+            "email": null,
+            "pets": [
+                {
+                    "type": "Dog",
+                    "name": "Suki",
+                    "breed": "Suki",
+                    "weight_kg": 10.0,
+                    "age": 1.0,
+                    "tasks": [
+                        {
+                            "label": "Feed Dog",
+                            "notes": "None",
+                            "schedule": {
+                                "every_days": 2,
+                                "start": "2025-12-15",
+                                "last_completed": null
+                            }
+                        }
+                    ],
+                    "vet_record": {
+                        "vaccinations": [],
+                        "appointments": []
+                    }
+                },
+                {
+                    "type": "Dog",
+                    "name": "Luna",
+                    "breed": "Husky",
+                    "weight_kg": 10.0,
+                    "age": 2.0,
+                    "tasks": [],
+                    "vet_record": {
+                        "vaccinations": [],
+                        "appointments": []
+                    }
+                }
+            ]
+        }
+    ]
+}
